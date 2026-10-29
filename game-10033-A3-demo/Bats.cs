@@ -4,7 +4,7 @@ namespace MohawkGame2D
 {
     public class Bats
     {
-        float speed = 200.0f;
+        float speed = 200.0f;1
         Vector2 direction = new Vector2(0, 0);
 
         float x = 200.0f;
