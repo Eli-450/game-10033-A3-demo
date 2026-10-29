@@ -1,5 +1,6 @@
 ﻿
 
+using System.ComponentModel.Design;
 using System.Numerics;
 using MohawkGame2D;
 
@@ -10,15 +11,25 @@ namespace MohawkGame2D
        
         public void setup()
         {
-          
+
+            Color randomColor = Random.Color();
+            Draw.FillColor = randomColor;
+            
+
+
+
         }
         public void update()
         {
-           
-            
+            Color randomColor = Random.Color();
+            Draw.FillColor = randomColor;
+
+
+
+
             DrawCreepyEyeBall();
-           
-        }
+
+            }
         void DrawCreepyEyeBall()
         {
             
@@ -30,7 +41,7 @@ namespace MohawkGame2D
             Vector2 mousePosition = Input.GetMousePosition();
             Vector2 mouseOffset = new Vector2(mousePosition.X - 200, mousePosition.Y - 150);
 
-            Draw.FillColor = Color.OffWhite;
+            
             Draw.LineSize = 4;
 
             Vector2 BigCirclePosition = new Vector2( mousePosition.X, mousePosition.Y );
@@ -39,20 +50,20 @@ namespace MohawkGame2D
             Vector2 BigCircleSize = new Vector2(bigHeight);
             Draw.Circle(BigCirclePosition, bigHeight);
 
-            Draw.FillColor = Color.Green;
+            
             Draw.LineSize = 3;
 
             Vector2 mediumCirclePosition2 = new Vector2( mousePosition.X, mousePosition.Y );
             mediumCirclePosition2 += offset;
             Draw.Circle(mediumCirclePosition2, mediumHeight);
 
-            Draw.FillColor = Color.Black;
+            
 
             Vector2 smallCirclePosition2 = new Vector2( mousePosition.X, mousePosition.Y );
             smallCirclePosition2 += offset;
             Draw.Circle(smallCirclePosition2, smallHeight);
 
-            Draw.FillColor = Color.OffWhite;
+            
             Draw.LineSize = 4;
 
             Vector2 mousePosition2 = Input.GetMousePosition();
@@ -62,14 +73,15 @@ namespace MohawkGame2D
             BigCirclePosition += offset;
             Draw.Circle(BigCirclePosition, bigHeight);
 
-            Draw.FillColor = Color.Blue;
+           
             Draw.LineSize = 3;
 
             mediumCirclePosition2 = new Vector2(mousePosition2.X  - 250, mousePosition2.Y + 150);
             mediumCirclePosition2 += offset;
             Draw.Circle(mediumCirclePosition2, mediumHeight);
 
-            Draw.FillColor = Color.Black;
+            
+
             smallCirclePosition2 = new Vector2(mousePosition2.X  - 250, mousePosition2.Y +  150);
             smallCirclePosition2 += offset;
             Draw.Circle(smallCirclePosition2, smallHeight);

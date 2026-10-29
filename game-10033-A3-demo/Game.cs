@@ -21,7 +21,7 @@ namespace MohawkGame2D
 
         public void Setup()
         {
-            Window.SetSize(800, 800);
+            
             Window.SetTitle("happy halloween");
 
             bats1.setup();
@@ -29,6 +29,7 @@ namespace MohawkGame2D
             bats3.setup();
             bats4.setup();
             phone.setup();
+            eye.setup();
             eye.setup();
         }
 
@@ -44,7 +45,8 @@ namespace MohawkGame2D
             bats4.update();
             phone.update();
             eye.update();
-                    
+            eye.update();
+
 
         }
 

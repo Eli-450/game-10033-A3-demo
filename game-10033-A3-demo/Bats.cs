@@ -4,15 +4,15 @@ namespace MohawkGame2D
 {
     public class Bats
     {
-        float speed = 200.0f;1
+        float speed = 200;
         Vector2 direction = new Vector2(0, 0);
 
-        float x = 200.0f;
-        float y = 200.0f;
+        float x = 200;
+        float y = 200;
 
         public void setup()
         {
-            speed = Random.Float(50.0f, 350.0f);
+            speed = Random.Float(50, 350);
 
             x = Random.Float(50, 350);
             randomizeNewBats();
