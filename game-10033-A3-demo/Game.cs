@@ -1,30 +1,54 @@
 ﻿// Include the namespaces (code libraries) you need below.
-using System;
 using System.Numerics;
 
 // The namespace your code is in.
 namespace MohawkGame2D
 {
-    /// <summary>
-    ///     Your game code goes inside this class!
-    /// </summary>
+   
     public class Game
     {
-        /// <summary>
-        ///     Setup runs once before the game loop begins.
-        /// </summary>
+        Bats bats1 = new Bats();
+
+        Bats bats2 = new Bats();
+        Bats bats3 = new Bats();
+
+        Bats bats4 = new Bats();
+
+        smartphone1 phone = new smartphone1();
+
+        CreepyEyeBall eye = new CreepyEyeBall();
+
+
         public void Setup()
         {
+            Window.SetSize(800, 800);
+            Window.SetTitle("happy halloween");
 
+            bats1.setup();
+            bats2.setup();
+            bats3.setup();
+            bats4.setup();
+            phone.setup();
+            eye.setup();
         }
 
-        /// <summary>
-        ///     Update runs every frame.
-        /// </summary>
+       
         public void Update()
+
         {
+            Window.ClearBackground(Color.DarkGray);
+
+            bats1.update();
+            bats2.update();
+            bats3.update();
+            bats4.update();
+            phone.update();
+            eye.update();
+                    
 
         }
-    }
 
+
+
+    }
 }
